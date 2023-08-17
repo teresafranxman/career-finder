@@ -1,4 +1,5 @@
 import { getJob } from "./getJob";
+import Link from "next/link";
 
 const Job = async ({ params }) => {
 	const job = await getJob(params);
@@ -9,6 +10,7 @@ const Job = async ({ params }) => {
 			<h2>{job.company_name}</h2>
 			<div dangerouslySetInnerHTML={{ __html: job.text }} />
 			<div>
+				<Link href={job.url}>apply now</Link>
 				<button>Save Job</button>
             </div>
         </main>
