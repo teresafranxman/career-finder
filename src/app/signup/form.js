@@ -14,16 +14,16 @@ const SignUpForm = () => {
 				password: "",
 			}}
 			validationSchema={schema}
-			onSubmit={(values) => {
-				console.log(values);
+			onSubmit={(values, actions) => {
+				console.log(values, actions);
 			}}
 		>
 			<Form>
 				<MyTextInput label="First Name" name="firstName" type="text" />
 				<MyTextInput label="Last Name" name="lastName" type="text" />
-				<MyTextInput label="Email" name="email" type="text" />
-                <MyTextInput label="Password" name="password" type="password" />
-                <Button type="submit" title="Sign Up" />
+				<MyTextInput label="Email" name="email" type="email" />
+				<MyTextInput label="Password" name="password" type="password" />
+				<Button title="Sign up" type="submit" />
 			</Form>
 		</Formik>
 	);

@@ -3,9 +3,9 @@ import * as yup from "yup";
 const schema = yup.object().shape({
 	firstName: yup
 		.string()
-		.max(50, "Must be 20 characters or less")
+		.max(20, "20 characters or less")
 		.required("First name is required"),
-	lastName: yup.string().max("Must be 20 characters or less").required(),
+	lastName: yup.string().max(20, "20 characters or less").required(),
 	email: yup
 		.string()
 		.email("Email must end in '@example.com' ")
