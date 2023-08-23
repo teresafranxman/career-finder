@@ -15,8 +15,18 @@ const LoginForm = () => {
 			}}
 		>
 			<Form>
-				<MyTextInput label="Email" name="email" type="text" />
-				<MyTextInput label="Password" name="password" type="text" />
+				<MyTextInput
+					label="Email"
+					name="email"
+					type="text"
+					autoComplete="email"
+				/>
+				<MyTextInput
+					label="Password"
+					name="password"
+					type="text"
+					autoComplete="off"
+				/>
 				<Button title="Log in" type="submit" />
 			</Form>
 		</Formik>

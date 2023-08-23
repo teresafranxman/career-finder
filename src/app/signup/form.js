@@ -19,10 +19,30 @@ const SignUpForm = () => {
 			}}
 		>
 			<Form>
-				<MyTextInput label="First Name" name="firstName" type="text" />
-				<MyTextInput label="Last Name" name="lastName" type="text" />
-				<MyTextInput label="Email" name="email" type="email" />
-				<MyTextInput label="Password" name="password" type="password" />
+				<MyTextInput
+					label="First Name"
+					name="firstName"
+					type="text"
+					autoComplete="given-name"
+				/>
+				<MyTextInput
+					label="Last Name"
+					name="lastName"
+					type="text"
+					autoComplete="family-name"
+				/>
+				<MyTextInput
+					label="Email"
+					name="email"
+					type="email"
+					autoComplete="email"
+				/>
+				<MyTextInput
+					label="Password"
+					name="password"
+					type="password"
+					autoComplete="new-password"
+				/>
 				<Button title="Sign up" type="submit" />
 			</Form>
 		</Formik>
