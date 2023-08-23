@@ -2,7 +2,7 @@
 import { Formik, Form } from "formik";
 import MyTextInput from "../components/myTextInput";
 import Button from "../components/button";
-import schema from "./schema";
+import userSchema from "./schema";
 
 const SignUpForm = () => {
 	return (
@@ -13,7 +13,7 @@ const SignUpForm = () => {
 				email: "",
 				password: "",
 			}}
-			validationSchema={schema}
+			validationSchema={userSchema}
 			onSubmit={(values, actions) => {
 				console.log(values, actions);
 			}}

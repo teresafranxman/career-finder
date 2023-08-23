@@ -1,16 +1,17 @@
-import * as yup from "yup";
+import { object, string } from "yup";
 
-const schema = yup.object().shape({
-	firstName: yup
-		.string()
-		.max(20, "20 characters or less")
+let userSchema = object({
+	firstName: string()
+		.max(15, "15 characters or less")
+		.min(3, "must be at least 3 characters long")
 		.required("First name is required"),
-	lastName: yup.string().max(20, "20 characters or less").required(),
-	email: yup
-		.string()
+	lastName: string()
+		.max(20, "20 characters or less")
+		.required("Last name is required"),
+	email: string()
 		.email("Email must end in '@example.com' ")
 		.required("Email is required"),
-	password: yup.string().required("Password is required"),
+	password: string().required("Password is required"),
 });
 
-export default schema;
+export default userSchema;
