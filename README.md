@@ -6,24 +6,26 @@ Career Finder is a front end web application that helps job seekers find the lat
 
 ## How To Install and Run The Project
 
-    - Copy repository link: https://github.com/teresafranxman97/career-finder.git
-    - Follow steps to create a clone of the repository to your local machine
+    - Copy repository link
+    https://github.com/teresafranxman97/career-finder.git
+
+    - Follow steps to create a clone of the repository on your local machine.
     https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
-    - Follow steps to create a Firebase account
+    - Follow steps to create a Firebase account.
     https://support.google.com/appsheet/answer/10104995?hl=en
-        - Open the console, select the project and nagivate to **project settings** to retrieve the configuration values
+        - From the console nagivate to **project settings** to retrieve the configuration values.
 
-    - Create an account for FindWork
+    - Create a Find Work account
     https://findwork.dev/
-        - Navigate to the RestAPI tab and copy API key
+        - Navigate to the RestAPI tab and copy your API key.
 
-    **This is essential for the app to utilize the api as it requires a key to access the data.**
+    **This is essential for the app to access the data as the API requires a key.**
 
-    - Follow steps to create a new **.env.local** file
+    - Follow steps to create a new **.env.local** file.
     https://nextjs.org/docs/app/building-your-application/configuring/environment-variables
 
-    **You will need to make sure you are correctly referencing your variables using the correct syntax**
+    **You will need to make sure you are using the correct syntax to reference your config variables.**
 
-    - Paste the Firebase configuration values and findwork API key into your .env.local file
-    - Test the app by making an api call 
+    - Paste the Firebase configuration values and findwork API key into your .env.local file.
+    - Test the app by making a request to the api.
