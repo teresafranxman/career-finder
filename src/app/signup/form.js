@@ -3,6 +3,8 @@ import { Formik, Form } from "formik";
 import MyTextInput from "../components/myTextInput";
 import Button from "../components/button";
 import userSchema from "./schema";
+import { addDoc, collection } from "firebase/firestore";
+import db from "../firebase/initFirebase";
 
 const SignUpForm = () => {
 	return (
@@ -15,7 +17,23 @@ const SignUpForm = () => {
 			}}
 			validationSchema={userSchema}
 			onSubmit={(values, actions) => {
-				console.log(values, actions);
+				const newUser = addDoc(collection(db, "users"), {
+					firstName: values.firstName,
+					lastName: values.lastName,
+					email: values.email,
+					password: values.password,
+				});
+
+				actions.resetForm({
+					values: {
+						firstName: "",
+						lastName: "",
+						email: "",
+						password: "",
+					},
+				});
+
+				return newUser;
 			}}
 		>
 			<Form>
