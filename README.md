@@ -29,3 +29,17 @@ Career Finder is a front end web application that helps job seekers find the lat
 
     - Paste the Firebase configuration values and findwork API key into your .env.local file.
     - Test the app by making a request to the api.
+
+## Tech Stack
+    - Next.JS
+    - Firebase
+    - Redux
+
+## Dependencies 
+###     Next.JS
+###     Firebase
+###     Formik
+###     Yup
+###     Redux
+###     Next Redux Wrapper
+###     Cypress
