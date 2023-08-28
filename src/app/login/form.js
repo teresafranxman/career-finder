@@ -13,6 +13,12 @@ const LoginForm = () => {
 			}}
 			validationSchema={loginSchema}
 			onSubmit={(values, actions) => {
+				actions.resetForm({
+					values: {
+						email: "",
+						password: "",
+					},
+				});
 				console.log(values, actions);
 			}}
 		>
