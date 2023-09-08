@@ -1,24 +1,25 @@
 {
-  "name": "career-finder",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "eslint": "8.45.0",
-    "eslint-config-next": "13.4.11",
-    "firebase": "^10.1.0",
-    "formik": "^2.4.3",
-    "next": "13.4.11",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "yup": "^1.2.0"
-  },
-  "devDependencies": {
-    "cypress": "^12.17.4"
-  }
+	"name": "career-finder",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"cypress:open": "cypress open"
+	},
+	"dependencies": {
+		"eslint": "8.45.0",
+		"eslint-config-next": "13.4.11",
+		"firebase": "^10.1.0",
+		"formik": "^2.4.3",
+		"next": "13.4.11",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"yup": "^1.2.0"
+	},
+	"devDependencies": {
+		"cypress": "^12.17.4"
+	}
 }
