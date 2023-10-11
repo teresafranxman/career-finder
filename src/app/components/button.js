@@ -1,5 +1,3 @@
-import React from "react";
-
 const Button = ({ title, type }) => {
 	return (
 		<div className="button-container">

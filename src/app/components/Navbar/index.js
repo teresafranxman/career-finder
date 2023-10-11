@@ -4,7 +4,9 @@ const Navbar = () => {
 	return (
 		<nav>
 			<div>
-				<h6>Career Finder</h6>
+				<Link href="/">
+					<h6>Career Finder</h6>
+				</Link>
 			</div>
 			<ul>
 				<Link href="/jobs">
