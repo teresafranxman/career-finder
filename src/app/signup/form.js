@@ -16,24 +16,31 @@ const SignUpForm = () => {
 				password: "",
 			}}
 			validationSchema={userSchema}
-			onSubmit={(values, actions) => {
-				const newUser = addDoc(collection(db, "users"), {
-					firstName: values.firstName,
-					lastName: values.lastName,
-					email: values.email,
-					password: values.password,
-				});
+			onSubmit={ async (values, actions) => {
+				try {
+					const newUser = await addDoc(collection(db, "users"), {
+						firstName: values.firstName,
+						lastName: values.lastName,
+						email: values.email,
+						password: values.password,
+					});
 
-				actions.resetForm({
-					values: {
-						firstName: "",
-						lastName: "",
-						email: "",
-						password: "",
-					},
-				});
+					console.log("user created successfully", newUser);
 
-				return newUser;
+					actions.resetForm({
+						values: {
+							firstName: "",
+							lastName: "",
+							email: "",
+							password: "",
+						},
+					});
+
+					return newUser;
+
+				} catch (err) {
+					console.log(err);
+				}
 			}}
 		>
 			<Form>
