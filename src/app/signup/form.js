@@ -4,7 +4,8 @@ import MyTextInput from "../components/myTextInput";
 import Button from "../components/button";
 import userSchema from "./schema";
 import { addDoc, collection } from "firebase/firestore";
-import db from "../firebase/initFirebase";
+import { db } from "../firebase/initFirebase";
+import UseSignupAuth from "./authSignupPassword";
 
 const SignUpForm = () => {
 	return (
@@ -16,7 +17,7 @@ const SignUpForm = () => {
 				password: "",
 			}}
 			validationSchema={userSchema}
-			onSubmit={ async (values, actions) => {
+			onSubmit={async (values, actions) => {
 				try {
 					const newUser = await addDoc(collection(db, "users"), {
 						firstName: values.firstName,
@@ -25,7 +26,7 @@ const SignUpForm = () => {
 						password: values.password,
 					});
 
-					console.log("user created successfully", newUser);
+					UseSignupAuth(values.email, values.password);
 
 					actions.resetForm({
 						values: {
@@ -35,11 +36,11 @@ const SignUpForm = () => {
 							password: "",
 						},
 					});
-
-					return newUser;
+					
+					console.log(newUser)
 
 				} catch (err) {
-					console.log(err);
+					console.log("Error: ", err);
 				}
 			}}
 		>
