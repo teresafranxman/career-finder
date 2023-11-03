@@ -5,7 +5,7 @@ import Button from "../components/button";
 import userSchema from "./schema";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../firebase/initFirebase";
-import UseSignupAuth from "./auth_signup";
+import UseSignupAuth from "../authentication/signup/auth_signup";
 
 const SignUpForm = () => {
 	return (
@@ -36,9 +36,8 @@ const SignUpForm = () => {
 							password: "",
 						},
 					});
-					
-					console.log(newUser)
 
+					return newUser;
 				} catch (err) {
 					console.log("Error: ", err);
 				}
