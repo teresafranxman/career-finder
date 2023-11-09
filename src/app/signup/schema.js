@@ -11,7 +11,9 @@ let userSchema = object({
 	email: string()
 		.email("Email must end in '@example.com' ")
 		.required("Email is required"),
-	password: string().required("Password is required"),
+	password: string()
+		.required("Password is required")
+		.min(6, "Password must contain more than 6 characters"),
 });
 
 export default userSchema;

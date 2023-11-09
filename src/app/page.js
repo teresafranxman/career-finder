@@ -1,5 +1,9 @@
+import { getAllDocs } from "./authentication/user/getAllUsers";
+
 const Page = () => {
-	return <h1>Hello, Next.js!</h1>;
-};
+	getAllDocs()
+	return (
+		<h1> Hello, Next.js!</h1>
+)};
 
 export default Page;
