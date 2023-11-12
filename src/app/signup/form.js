@@ -1,11 +1,12 @@
 "use client";
-import { Formik, Form } from "formik";
+import { Formik, Form} from "formik";
 import MyTextInput from "../components/myTextInput";
 import Button from "../components/button";
 import userSchema from "./schema";
 import { collection, setDoc, doc } from "firebase/firestore";
 import { db } from "../firebase/initFirebase";
 import UseSignupAuth from "../authentication/signup/auth_signup";
+import { getOneDoc } from "../authentication/user/getAllUsers";
 
 const SignUpForm = () => {
 	return (
@@ -20,6 +21,9 @@ const SignUpForm = () => {
 			onSubmit={async (values, actions) => {
 				try {
 					const newUserDoc = doc(collection(db, "users"));
+					
+					getOneDoc(newUserDoc.id);
+
 					await setDoc(newUserDoc, {
 						id: newUserDoc.id,
 						firstName: values.firstName,
@@ -38,8 +42,9 @@ const SignUpForm = () => {
 							password: "",
 						},
 					});
-					console.log("New user created successfully :", newUserDoc);
 
+					console.log("New user created successfully :", newUserDoc);
+					// return newUserDoc;
 				} catch (err) {
 					console.log("Error: ", err);
 				}

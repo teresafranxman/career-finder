@@ -1,4 +1,4 @@
-import { collection, getDocs, getDoc } from "firebase/firestore";
+import { collection, doc, getDocs, getDoc } from "firebase/firestore";
 import { db } from "../../firebase/initFirebase";
 
 export const getAllDocs = async () => {
@@ -8,13 +8,14 @@ export const getAllDocs = async () => {
 	});
 };
 
-export const getDocument = async (id) => {
-	const usersRef = doc(db, "users", `${id}`);
-	const docSnap = await getDoc(usersRef);
+
+export const getOneDoc = async (id) => {
+	const docRef = doc(db, "users", id)
+	const docSnap = await getDoc(docRef)
 
 	if (docSnap.exists()) {
-		console.log("Document data exists: ", docSnap.data());
+		console.log("Document exists: ", docSnap.data())
 	} else {
-		console.log("Document does not exist");
+		console.log("DOC DOES NOT EXIST!")
 	}
-};
+}
