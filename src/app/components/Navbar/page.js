@@ -13,10 +13,6 @@ const Navbar = () => {
 					{" "}
 					<li>jobs</li>
 				</Link>
-				<Link href="/about">
-					{" "}
-					<li>about</li>
-				</Link>
 				<Link href="/login">
 					{" "}
 					<li>login</li>

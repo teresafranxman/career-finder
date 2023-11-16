@@ -1,4 +1,4 @@
-import { getAllDocs } from "./authentication/user/get_users";
+import { getAllDocs } from "./firebase/get_firestore_users";
 
 const Page = () => {
 	getAllDocs();

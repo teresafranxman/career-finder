@@ -1,11 +1,11 @@
 "use client";
 import { Formik, Form } from "formik";
-import MyTextInput from "../components/myTextInput";
-import Button from "../components/button";
+import MyTextInput from "../components/MyTextInput/page";
+import Button from "../components/Button/page";
 import userSchema from "./schema";
 import { collection, setDoc, doc } from "firebase/firestore";
 import { db } from "../firebase/initFirebase";
-import UseSignupAuth from "../authentication/signup/auth_signup";
+import UseSignupAuth from "../authentication/signup_auth";
 
 const SignUpForm = () => {
 	return (

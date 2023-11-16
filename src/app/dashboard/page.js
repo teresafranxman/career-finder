@@ -1,7 +1,7 @@
 const UserDash = () => {
     return (
         <>
-            <h1>user dash</h1>
+            <h1>This route should be protected</h1>
         </>
     )
 }
