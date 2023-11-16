@@ -3,9 +3,8 @@ import { Formik, Form } from "formik";
 import MyTextInput from "../components/MyTextInput/page";
 import Button from "../components/Button/page";
 import userSchema from "./schema";
-import { collection, setDoc, doc } from "firebase/firestore";
-import { db } from "../firebase/initFirebase";
-import UseSignupAuth from "../authentication/signup_auth";
+import UseSignupAuth from "../authentication/useSignupAuth";
+import AddUserDoc from "./addUserDoc";
 
 const SignUpForm = () => {
 	return (
@@ -19,15 +18,7 @@ const SignUpForm = () => {
 			validationSchema={userSchema}
 			onSubmit={async (values, actions) => {
 				try {
-					const newUserDoc = doc(collection(db, "users"));
-
-					await setDoc(newUserDoc, {
-						id: newUserDoc.id,
-						firstName: values.firstName,
-						lastName: values.lastName,
-						email: values.email,
-						password: values.password,
-					});
+					AddUserDoc(values);
 
 					UseSignupAuth(values.email, values.password);
 
@@ -39,9 +30,6 @@ const SignUpForm = () => {
 							password: "",
 						},
 					});
-
-					// console.log("New user created successfully :", newUserDoc);
-					return newUserDoc;
 				} catch (err) {
 					console.log("Error: ", err);
 				}
