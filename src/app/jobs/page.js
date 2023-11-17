@@ -1,5 +1,5 @@
 import { getJobs } from "./getJobs";
-import JobsList from "./JobsList";
+import JobsList from "./jobs_list";
 
 const Jobs = async () => {
 	const jobs = await getJobs();
