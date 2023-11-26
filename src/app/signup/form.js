@@ -21,7 +21,7 @@ const SignUpForm = () => {
 					AddUserDoc(values);
 
 					UseSignupAuth(values.email, values.password);
-
+					
 					actions.resetForm({
 						values: {
 							firstName: "",

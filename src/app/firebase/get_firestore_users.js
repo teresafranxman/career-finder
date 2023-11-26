@@ -7,3 +7,4 @@ export const getAllDocs = async () => {
 		console.log(doc.id, "=> ", doc.data());
 	});
 };
+

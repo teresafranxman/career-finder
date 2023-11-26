@@ -4,7 +4,6 @@ import { db } from "../firebase/initFirebase";
 const AddUserDoc = async (values) => {
 	try {
 		const newUserDoc = doc(collection(db, "users"));
-
 		await setDoc(newUserDoc, {
 			id: newUserDoc.id,
 			firstName: values.firstName,
@@ -14,6 +13,8 @@ const AddUserDoc = async (values) => {
 		});
 
 		return newUserDoc;
+		
+		// console.log(newUserDoc)
 	} catch (err) {
 		console.log("Error :", err);
 	}
