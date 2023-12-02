@@ -1,5 +1,6 @@
 "use client";
 import { Formik, Form } from "formik";
+import { useRouter } from "next/navigation";
 import MyTextInput from "../components/MyTextInput/page";
 import Button from "../components/Button/page";
 import userSchema from "./schema";
@@ -7,6 +8,8 @@ import UseSignupAuth from "../authentication/useSignupAuth";
 import AddUserDoc from "./addUserDoc";
 
 const SignUpForm = () => {
+	const router = useRouter();
+
 	return (
 		<Formik
 			initialValues={{
@@ -30,6 +33,9 @@ const SignUpForm = () => {
 							password: "",
 						},
 					});
+
+					return router.push('/dashboard')
+					
 				} catch (err) {
 					console.log("Error: ", err);
 				}
