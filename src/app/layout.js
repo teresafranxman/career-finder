@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar/page";
-import { Providers } from "./StoreProvider";
+import Providers from "./StoreProvider";
 
 export default function RootLayout({ children }) {
 	return (
