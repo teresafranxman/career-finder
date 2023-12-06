@@ -13,7 +13,7 @@ const jobsSlice = createSlice({
 			state.jobs = action.payload;
 		},
 		saveJob: (state, action) => {
-			const findIndex = state.jobs.findIndex((job) => job.id === action.payload.id)
+			const findIndex = state.jobs.find((job) => job.id === action.payload.id)
 			state.savedJobs.push(findIndex)
 		}
 	}
