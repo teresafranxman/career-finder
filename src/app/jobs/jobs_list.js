@@ -3,7 +3,7 @@ import Link from "next/link";
 const JobsList = ({ jobs }) => {
 	return (
 		<>
-			{jobs.results.map((job) => (
+			{jobs.jobs.map((job) => (
 				<Link href={`/jobs/${job.id}`} key={job.id}>
 					<div>
 						<h2>{job.role}</h2>
