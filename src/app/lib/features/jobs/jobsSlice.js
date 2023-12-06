@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
 	jobs: [],
-	job: {}
+	savedJobs: []
 };
 
 const jobsSlice = createSlice({
@@ -12,11 +12,12 @@ const jobsSlice = createSlice({
 		setJobs: (state, action) => {
 			state.jobs = action.payload;
 		},
-		setSingleJob: (state, action) => {
-			state.job = action.payload
+		saveJob: (state, action) => {
+			const findIndex = state.jobs.findIndex((job) => job.id === action.payload.id)
+			state.savedJobs.push(findIndex)
 		}
 	}
 });
 
-export const { setJobs, setSingleJob } = jobsSlice.actions;
+export const { setJobs, saveJob } = jobsSlice.actions;
 export default jobsSlice.reducer;
