@@ -14,7 +14,6 @@ const AddUserDoc = async (values) => {
 
 		return newUserDoc;
 		
-		// console.log(newUserDoc)
 	} catch (err) {
 		console.log("Error :", err);
 	}
