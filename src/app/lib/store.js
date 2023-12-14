@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import jobsReducer from "./features/jobs/jobsSlice";
+import savedJobsReducer from "./features/jobs/savedJobs";
 
 const makeStore = () => {
 	return configureStore({
 		reducer: {
-			jobs: jobsReducer,
+			savedJobs: savedJobsReducer,
 		},
 		devTools: true,
 	});

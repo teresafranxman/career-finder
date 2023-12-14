@@ -1,10 +1,15 @@
 "use client";
 import Link from "next/link";
-import { saveJob } from "@/app/lib/features/jobs/jobsSlice";
+import { saveJob, setJob } from "@/app/lib/features/jobs/savedJobs";
 import { useDispatch } from "react-redux";
+import { useEffect } from "react";
 
 const JobPost = ({ job }) => {
 	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(setJob(job));
+	});
 
 	return (
 		<main key={job.id}>

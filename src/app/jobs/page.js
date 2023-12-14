@@ -1,9 +1,8 @@
-"use client";
 import JobsList from "./jobs_list";
-import { useSelector } from "react-redux";
+import { getJobs } from "./getJobs";
 
-const Jobs =  () => {
-	const jobs = useSelector((state) => state.jobs);
+const Jobs =  async () => {
+	const jobs = await getJobs();
 
 	return (
 		<main>
