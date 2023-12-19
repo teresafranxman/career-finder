@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import savedJobsReducer from "./features/jobs/savedJobs";
+import savedJobsReducer from "./features/jobs/savedJobsSlice";
 
 const makeStore = () => {
 	return configureStore({

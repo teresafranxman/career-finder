@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { saveJob, setJob } from "@/app/lib/features/jobs/savedJobs";
+import { saveJob, setJob } from "@/app/lib/features/jobs/savedJobsSlice";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 
