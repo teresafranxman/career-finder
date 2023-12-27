@@ -1,6 +1,6 @@
 import UserDashboardNavBar from "./dashboard_navbar";
 
-export const DashboardLayout = ({ children }) => {
+const DashboardLayout = ({ children }) => {
 	return (
 		<section>
 			<UserDashboardNavBar />
@@ -8,3 +8,5 @@ export const DashboardLayout = ({ children }) => {
 		</section>
 	);
 };
+
+export default DashboardLayout;
