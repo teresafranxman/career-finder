@@ -1,4 +1,4 @@
-import { auth } from "../firebase/initFirebase";
+import { auth } from "../initFirebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
 const UseSignupAuth = (email, password) => {

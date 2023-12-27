@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import MyTextInput from "../components/MyTextInput/page";
 import Button from "../components/Button/page";
 import userSchema from "./schema";
-import UseSignupAuth from "../authentication/useSignupAuth";
+import UseSignupAuth from "../firebase/authentication/useSignupAuth";
 import AddUserDoc from "./addUserDoc";
 
 const SignUpForm = () => {
@@ -24,7 +24,7 @@ const SignUpForm = () => {
 					AddUserDoc(values);
 
 					UseSignupAuth(values.email, values.password);
-					
+
 					actions.resetForm({
 						values: {
 							firstName: "",
@@ -34,8 +34,7 @@ const SignUpForm = () => {
 						},
 					});
 
-					return router.push('/dashboard')
-					
+					return router.push("/dashboard");
 				} catch (err) {
 					console.log("Error: ", err);
 				}
