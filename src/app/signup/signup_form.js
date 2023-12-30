@@ -21,9 +21,9 @@ const SignUpForm = () => {
 			validationSchema={userSchema}
 			onSubmit={async (values, actions) => {
 				try {
-					AddUserDoc(values);
-
 					UseSignupAuth(values.email, values.password);
+
+					AddUserDoc(values);
 
 					actions.resetForm({
 						values: {
