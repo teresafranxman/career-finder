@@ -5,7 +5,6 @@ import MyTextInput from "../components/MyTextInput/page";
 import Button from "../components/Button/page";
 import userSchema from "./schema";
 import UseSignupAuth from "../firebase/authentication/useSignupAuth";
-import AddUserDoc from "./addUserDoc";
 
 const SignUpForm = () => {
 	const router = useRouter();
@@ -21,9 +20,7 @@ const SignUpForm = () => {
 			validationSchema={userSchema}
 			onSubmit={async (values, actions) => {
 				try {
-					UseSignupAuth(values.email, values.password);
-
-					AddUserDoc(values);
+					UseSignupAuth(values.email, values.password, values);
 
 					actions.resetForm({
 						values: {

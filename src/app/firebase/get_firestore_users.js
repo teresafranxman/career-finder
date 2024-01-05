@@ -5,9 +5,12 @@ export const checkIfDocExists = async (id) => {
 	const documentReference = doc(db, "users", `${id}`);
 	const documentSnap = await getDoc(documentReference);
 
-	if (!documentSnap.exists()) {
-		return null;
+	if (documentSnap.exists()) {
+		console.log(documentSnap.data())
 	}
+	// if (!documentSnap.exists()) {
+	// 	return null;
+	// }
 
-	return documentSnap.data();
+	// return documentSnap.data();
 };
