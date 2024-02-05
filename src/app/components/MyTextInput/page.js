@@ -1,3 +1,4 @@
+'use client'
 import { useField } from "formik";
 
 const MyTextInput = ({ label, ...props }) => {
