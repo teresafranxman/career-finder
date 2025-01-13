@@ -1,7 +1,7 @@
 "use client";
 import { Form, Formik } from "formik";
 import MyTextInput from "../components/MyTextInput";
-import Button from "../components/Button/page";
+import Button from "../components/Button";
 import loginSchema from "./schema";
 
 const LoginForm = () => {

@@ -2,7 +2,7 @@ import JobsList from "./jobs_list";
 import { getJobs } from "./getJobs";
 
 const Jobs = async () => {
-    const jobsList = await getJobs();
+  const jobsList = await getJobs();
 
   return (
     <main>

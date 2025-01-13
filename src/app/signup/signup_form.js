@@ -2,7 +2,7 @@
 import { Formik, Form } from "formik";
 import { useRouter } from "next/navigation";
 import MyTextInput from "../components/MyTextInput";
-import Button from "../components/Button/page";
+import Button from "../components/Button";
 import userSchema from "./schema";
 import UseSignupAuth from "../firebase/authentication/useSignupAuth";
 

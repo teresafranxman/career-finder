@@ -8,9 +8,5 @@ export const checkIfDocExists = async (id) => {
 	if (documentSnap.exists()) {
 		console.log(documentSnap.data())
 	}
-	// if (!documentSnap.exists()) {
-	// 	return null;
-	// }
-
-	// return documentSnap.data();
+	
 };
