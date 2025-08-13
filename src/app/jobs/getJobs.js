@@ -8,6 +8,7 @@ export const getJobs = async () => {
   });
 
   const jobs = await response.json();
+  
 
   return jobs;
 };

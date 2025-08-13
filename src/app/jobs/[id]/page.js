@@ -3,7 +3,7 @@ import JobPost from "./jobPost";
 
 const Job = async ({ params }) => {
 	const job = await getJob(params);
-    
+
 	return (
 		<>
 			<JobPost job={job} />

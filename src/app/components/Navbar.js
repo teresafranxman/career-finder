@@ -1,24 +1,24 @@
 import Link from "next/link";
 
 const Navbar = () => {
-	return (
+  return (
     <nav>
       <div>
         <Link href="/">
           <h6>Career Finder</h6>
         </Link>
       </div>
-			<ul>
-				<Link href="/">
-				<li>Home</li>
-				</Link>
-        <Link href="/jobs">
-          {" "}
-          <li>Find jobs</li>
+      <ul>
+        <Link href="/">
+          <li>Home</li>
         </Link>
         <Link href="/jobs">
           {" "}
-          <li>Categories</li>
+          <li>Discover jobs</li>
+        </Link>
+        <Link href="/jobs">
+          {" "}
+          <li>Career help</li>
         </Link>
         <Link href="/login">
           {" "}
